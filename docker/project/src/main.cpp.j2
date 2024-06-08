@@ -179,10 +179,12 @@ void setup() {
   pinMode({{ RADIOA_CS }}, OUTPUT);
   digitalWrite({{ RADIOA_CS }}, 1);
 
+{% if RADIOB is defined %}
   // reset Radio B
   pinMode({{ RADIOB_CS }}, OUTPUT);
   digitalWrite({{ RADIOB_CS }}, 1);
-  
+{% endif %}
+
   // TODO: reset Radio C
   {% endif %}
 
